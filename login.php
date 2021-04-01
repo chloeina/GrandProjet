@@ -1,7 +1,7 @@
 <html>
 <?php 
 
-include(connecter.php);
+require(connecter.php);
 
 
     
