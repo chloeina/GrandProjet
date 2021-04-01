@@ -1,29 +1,27 @@
-<html>
 <?php 
+ob_start();
+require("connecter.php");
 
-require(connecter.php);
 
-
-    
 $uname=$_POST['username'];
 $password=$_POST['password'];
     
-$sql="SELECT login, fonction FROM utilisateurs WHERE nom='$uname'";
+$sql="SELECT login FROM visiteur WHERE nom='$uname'";
 $result = $connexion->query($sql);
 $ligne = $result->fetch();
 $password = $ligne['password'];
-$fonction = $ligne['fonction'];
+$profession=$_POST['profession'];
 	
 if($password!=$motPasseBdd){
    
      echo " Votre identifiant ou mot de passe est faux! ";
- 	include('login.html');
+ 	include('index.html');
     exit;
     }
     else{
 	   
-	  if($fonction==0){
-       		header("location:Gestion.html");
+	  if($profession=='visiteur'){
+       	header("location:Gestion.html");
 		ob_end_flush();
 		exit;
 	 }else{
@@ -31,6 +29,10 @@ if($password!=$motPasseBdd){
 		ob_end_flush();
 		exit;
 		}   
+		
 }
+//on libère le jeu d'enregistrement
+	$res->closeCursor();
+	// on ferme la connexion au SGBD
+	$connexion=null;
 ?>
-</html>
