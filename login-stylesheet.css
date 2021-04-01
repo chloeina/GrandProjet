@@ -1,0 +1,39 @@
+body{
+	margin: 0 auto;
+	background-image: url('../images/office1.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.login{
+	width: 500px;
+	height: 450px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: rgba(40, 60, 80,0.7);
+	margin-top: 160px;
+	border-radius: 15px;
+}
+
+.login img{
+	width: 210px;
+	height: 150px;
+	margin-top: -60px;
+}
+
+.input{
+	margin-top: 30px;
+	height: 45px;
+	width: 300px;
+	font-size: 18px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding-left: 20px;
+}
+
+.btn-login{
+	padding: 15px 25px;
+	border: none;
+	background-color: #DAD085;
+	color: #fff;
+}
