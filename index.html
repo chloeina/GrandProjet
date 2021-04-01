@@ -7,12 +7,16 @@
 <body>
 	<div class="login">
 	<img src="https://sites.google.com/site/portfolioclementparent/_/rsrc/1394810844515/mon-carnet-de-bord/travaux-et-projets/projet-gsb/logo.png"/>
-		<form>
+		<form method="post" action="login.php">
 			<div class="premier">
 				<input type="text" name="username" placeholder="identifiant" class="input"/>	
 			</div>
 			<div class="premier">
 				<input type="password" name="password" placeholder="mot de passe" class="input"/>
+			</div>
+			<div>
+				Visiteur<input type="radio" name="profession" value="visiteur" >
+				Comptable<input type="radio" name="profession" value="comptable">
 			</div>
 			<input type="submit" type="submit" value="CONNEXION" class="btn-login"/>
 		</form>
