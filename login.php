@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
     
     if($connexion->rowCount($result)>0){
         //rediriger vers la page v ou c
-		echo "c'est fait";
+		echo "Vous êtes bien connecté";
     }
     else{
         echo " Votre identifiant ou mot de passe est faux! ";
