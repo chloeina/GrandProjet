@@ -8,14 +8,15 @@ include(connecter.php);
 $uname=$_POST['username'];
 $password=$_POST['password'];
     
-$sql="SELECT login FROM utilisateursWHERE nom='$uname'";
+$sql="SELECT login FROM utilisateurs WHERE nom='$uname'";
 $result = $connexion->query($sql);
 $ligne = $result->fetch();
-$motPasseBdd = $ligne['motDePasse'];
+$password = $ligne['password'];
 
 $sqlr="SELECT fonction FROM utilisateurs";
 $result = $connexion->query($sql);
 $ligne = $result->fetch();
+$fonction = $ligne['fonction'];
 	
 if($password!=$motPasseBdd){
    
