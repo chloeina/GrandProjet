@@ -3,24 +3,37 @@
 
 include(connecter.php);
 
-if(isset($_POST['submit'])){
+
     
-    $uname=$_POST['username'];
-    $password=$_POST['password'];
+$uname=$_POST['username'];
+$password=$_POST['password'];
     
-    $sql="select * from loginform where user='".$uname."'AND Pass='".$password."' limit 1";
-    
-    $result=$connexion->query($sql);
-    
-    if($connexion->rowCount($result)>0){
-        //rediriger vers la page v ou c
-		echo "Vous êtes bien connecté";
+$sql="SELECT login FROM utilisateursWHERE nom='$uname'";
+$result = $connexion->query($sql);
+$ligne = $result->fetch();
+$motPasseBdd = $ligne['motDePasse'];
+
+$sqlr="SELECT fonction FROM utilisateurs";
+$result = $connexion->query($sql);
+$ligne = $result->fetch();
+	
+if($password!=$motPasseBdd){
+   
+     echo " Votre identifiant ou mot de passe est faux! ";
+ 	include('login.html');
+    exit;
     }
     else{
-        echo " Votre identifiant ou mot de passe est faux! ";
-        exit();
-    }
-        
+	   
+	  if($fonction==0){
+       		header("location:Gestion.html");
+		ob_end_flush();
+		exit;
+	 }else{
+	 	header("location:Comptable.html");
+		ob_end_flush();
+		exit;
+		}   
 }
 ?>
 </html>
