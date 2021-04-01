@@ -8,14 +8,10 @@ require(connecter.php);
 $uname=$_POST['username'];
 $password=$_POST['password'];
     
-$sql="SELECT login FROM utilisateurs WHERE nom='$uname'";
+$sql="SELECT login, fonction FROM utilisateurs WHERE nom='$uname'";
 $result = $connexion->query($sql);
 $ligne = $result->fetch();
 $password = $ligne['password'];
-
-$sqlr="SELECT fonction FROM utilisateurs";
-$result = $connexion->query($sql);
-$ligne = $result->fetch();
 $fonction = $ligne['fonction'];
 	
 if($password!=$motPasseBdd){
