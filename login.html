@@ -3,11 +3,27 @@
 <head>
 	<title> Login Formulaire </title>
 	<link rel="stylesheet" type="text/css" href="css/login-stylesheet.css">
+	<script type="text/javascript">
+	function verifChamps()
+	{
+		if (document.getElementById('nom').value==''
+            || document.getElementById('mdp').value==''
+              )
+		{
+			alert("Remplir tous les champs");
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+</script>
 </head>
 <body>
 	<div class="login">
 	<img src="https://sites.google.com/site/portfolioclementparent/_/rsrc/1394810844515/mon-carnet-de-bord/travaux-et-projets/projet-gsb/logo.png"/>
-		<form method="post" action="login.php">
+		<form method="post" action="login.php" onSubmit="return verifChamps()" name="login">
 			<div class="premier">
 				<input type="text" name="username" placeholder="identifiant" class="input"/>	
 			</div>
