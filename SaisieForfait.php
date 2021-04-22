@@ -14,7 +14,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Saisie</title>
-	<link href="comptable.css" rel="stylesheet" type="text/css" />
+	<link href="SaisieForfait.css" rel="stylesheet" type="text/css" />
 	
 	<SCRIPT LANGUAGE="JavaScript">
 		var maintenant=new Date();
@@ -31,9 +31,9 @@
 		echo $_SESSION['username'];
 		?>
 	</b>.<br/>
-	
+		<a href="quitterUtilisateur.php" target="_top" class="deco">Deconnexion</a>
 		<p><a href="ConsulterForfait.php" > Consultation des saisies </a></p>
-		<p><a href="quitterUtilisateur.php" target="_top">Deconnexion</a></p>
+		
 		
 	<h1> Saisis des frais </h1>
 	<form action="saisie.php" method="post" name="saisieforfait">
@@ -42,24 +42,14 @@
 				<caption>Etat des frais forfaitaires</caption>
 			</tr>
 			<tr align="center">
-				<th> Frais forfaitaires </th> <th> Montant </th>
+				<th> Frais forfaitaires </th> <th> Repas midi </th> <th> Nuitée </th><th> Repas soir plus nuitée </th> <th> Kilomètres </th> 
 			</tr>
 			<tr align="center">
-				<th> Repas midi </th> 
+				<th> Montant </th>
 				<td width="90" ><input type="text" size="10" name="RQ"/></td>
-			</tr>
-			<tr align="center">
-				<th> Nuitée </th> 
 				<td width="90"><input type="text" size="10" name="NQ"/></td> 
-			</tr>
-			<tr align="center">
-				<th> Repas soir plus nuitée </th> 
 				<td width="90"> <input type="text" size="10" name="RNQ"/></td>
-			</tr>
-			<tr align="center">
-				<th> Kilomètres </th> 
 				<td width="90"> <input type="text" size="10" name="KQ"/></td>
-			<!--<td><input type="text" class="zone" size="6" name="Nbjf"/></td>	-->	
 			</tr>
 
 		</table><br/>

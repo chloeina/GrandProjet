@@ -23,7 +23,9 @@
 		echo $_SESSION['username'];
 		?>
 	</b>.<br/>
-	<p><a href="quitterUtilisateur.php" target="_top">Deconnexion</a></p>
+	
+	<a href="quitterUtilisateur.php" target="_top">Deconnexion</a>
+	
   <h1> Validation des frais </h1>
 <br/>
 	<form  action="Comptable.php" method="post">

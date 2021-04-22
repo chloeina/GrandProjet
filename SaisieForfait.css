@@ -1,0 +1,40 @@
+h1
+{
+	text-align : center;
+}
+
+body
+{
+	background-color : #50B667;
+}
+
+p 
+{
+	font-size : 30px;
+	text-align : center;
+}
+
+label
+{
+	font-size : 20px;
+}
+
+table
+{
+	margin : auto;
+}
+
+div
+{
+	text-align : center;
+}
+
+.deco
+{
+	text-align:right;
+}
+
+caption
+{
+	font-size:20px;
+}

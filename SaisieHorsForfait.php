@@ -14,7 +14,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Saisie</title>
-	<link href="comptable.css" rel="stylesheet" type="text/css" />
+	<link href="SaisieForfait.css" rel="stylesheet" type="text/css" />
 	
 	<SCRIPT LANGUAGE="JavaScript">
 		var maintenant=new Date();
@@ -32,8 +32,10 @@
 		?>
 	</b>.<br/>
 	
+	<a href="quitterUtilisateur.php" target="_top" class="deco">Deconnexion</a>
+	
 	<p><a href="SaisieForfait.php" > Saisie des frais </a></p>
-	<p><a href="quitterUtilisateur.php" target="_top">Deconnexion</a></p>
+	
 	<form action="SaisieHorsForfait.php" method="post" name="saisiehorsforfait">
 		<table border="2" cellpadding="2" cellpadding="5">
 			<tr>
@@ -59,4 +61,5 @@
 <?php
 	
 	echo"Vous etes bien sur la page de frais hors forfait";
+	//mettre ici les infos pour la base de données
 ?>
