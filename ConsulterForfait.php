@@ -12,8 +12,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Consulter</title>
-    <h1>Consultation des anciennes fiches de remboursement : </h1>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+    <link href="SaisieForfait.css" rel="stylesheet" type="text/css" />
   </head>
   
   <body>
@@ -23,11 +23,11 @@
 		echo $_SESSION['username'];
 		?>
 	</b>.<br/>
-    <script src="script.js"></script>
    
+   	<a href="quitterUtilisateur.php" target="_top">Deconnexion</a>
 	<p><a href="SaisieForfait.php" > Nouvelle Saisie </a></p>
-	<p><a href="quitterUtilisateur.php" target="_top">Deconnexion</a></p>
 
+	<h1>Consultation des anciennes fiches de remboursement : </h1>
   <h2>Date : <input type="month" name="consultationdate"> </h2>
 <br><br>
 <h3><li>2020</li></h3>
