@@ -27,6 +27,19 @@ table
 div
 {
 	text-align : center;
+	position : sticky;
+	width : 100%;
+	top : 0px;
+}
+div ul
+{
+  list-style-type: none;
+}
+div ul li
+{
+  float: left;
+  width: 45%;
+  text-align: center;
 }
 
 .deco
@@ -36,5 +49,9 @@ div
 
 caption
 {
-	font-size:20px;
+	font-size:25px;
+}
+.btn
+{
+	background-color : #B0C4DE;
 }

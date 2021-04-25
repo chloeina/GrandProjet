@@ -31,9 +31,16 @@
 		echo $_SESSION['username'];
 		?>
 	</b>.<br/>
-		<a href="quitterUtilisateur.php" target="_top" class="deco">Deconnexion</a>
-		<p><a href="ConsulterForfait.php" > Consultation des saisies </a></p>
-		
+		<div>
+			<ul>
+				<li>
+					<a href="quitterUtilisateur.php" target="_top" class="deco">Deconnexion</a>
+				</li>
+				<li>
+					<a href="ConsulterForfait.php" > Consultation des saisies </a>
+				</li>
+			</ul>	
+		</div><br/>
 		
 	<h1> Saisis des frais </h1>
 	<form action="saisie.php" method="post" name="saisieforfait">
@@ -64,7 +71,7 @@
 			</tr>
 		</table><br/>
 		<div>		
-			<input class="zone" type="reset" /><input type="submit">
+			<input type="reset" class="btn"/><input type="submit" class="btn"/>
 		</div><br/>
 	</form>
 </body>

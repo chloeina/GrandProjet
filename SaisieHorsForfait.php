@@ -31,11 +31,16 @@
 		echo $_SESSION['username'];
 		?>
 	</b>.<br/>
-	
-	<a href="quitterUtilisateur.php" target="_top" class="deco">Deconnexion</a>
-	
-	<p><a href="SaisieForfait.php" > Saisie des frais </a></p>
-	
+	<div>
+		<ul>
+			<li>
+				<a href="quitterUtilisateur.php" target="_top" class="deco">Deconnexion</a>
+			</li>
+			<li>
+				<a href="SaisieForfait.php" > Saisie des frais </a>
+			</li>
+		</ul>	
+	</div><br/>
 	<form action="SaisieHorsForfait.php" method="post" name="saisiehorsforfait">
 		<table border="2" cellpadding="2" cellpadding="5">
 			<tr>

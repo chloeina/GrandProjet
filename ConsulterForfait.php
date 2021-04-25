@@ -23,10 +23,16 @@
 		echo $_SESSION['username'];
 		?>
 	</b>.<br/>
-   
-   	<a href="quitterUtilisateur.php" target="_top">Deconnexion</a>
-	<p><a href="SaisieForfait.php" > Nouvelle Saisie </a></p>
-
+   <div>
+		<ul>
+			<li>
+				<a href="quitterUtilisateur.php" target="_top" class="deco">Deconnexion</a>
+			</li>
+			<li>
+				<a href="SaisieForfait.php" > Nouvelle Saisie </a>
+			</li>
+		</ul>	
+	</div><br/>
 	<h1>Consultation des anciennes fiches de remboursement : </h1>
   <h2>Date : <input type="month" name="consultationdate"> </h2>
 <br><br>
