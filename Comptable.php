@@ -12,7 +12,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Comptable</title>
-	<link href="Comptable.css" rel="stylesheet" type="text/css"/>
+	<link href="Comptables.css" rel="stylesheet" type="text/css"/>
 	
 </head>
 
@@ -50,18 +50,18 @@
 				</tr>
 				<tr align="center">
 					<td width="100" ><input type="text" size="12" name="Rpm"/></td>
-					<td width="220"><input type="text" size="30" name="Nui"/></td> 
-					<td width="90"> <input type="text" size="10" name="Rsn"/></td>
-					<td width="90"> <input type="text" size="10" name="kms"/></td>
-					<td width="80"> 
-						<select size="4" name="Sitf">
+					<td width="100"><input type="text" size="12" name="Nui"/></td> 
+					<td width="100"> <input type="text" size="20" name="Rsn"/></td>
+					<td width="100"> <input type="text" size="12" name="kms"/></td>
+					<td width="100"> 
+						<select size="3" name="Sitf">
 							<option value="E">Enregistré</option>
 							<option value="V">Validé</option>
 							<option value="R">Remboursé</option>
 						</select>
 					</td>
 					<td>
-						<input type="text" class="zone" size="6" name="Nbjf"/>
+						<input type="text" class="zone" size="12" name="Nbjf"/>
 					</td>		
 
 				</tr>
@@ -75,10 +75,11 @@
 				<tr>
 					<th>Date</th><th>Libellé </th><th>Montant</th><th>Situation</th><th> Nb justificatifs </th>
 				</tr>
-				<tr align="center"><td width="100" ><input type="text" size="12" name="Dat"/></td>
-					<td width="220"><input type="text" size="30" name="Lib"/></td> 
-					<td width="90"> <input type="text" size="10" name="Mont"/></td>
-					<td width="80"> 
+				<tr align="center">
+					<td width="100" ><input type="text" size="12" name="Dat"/></td>
+					<td width="100"><input type="text" size="12" name="Lib"/></td> 
+					<td width="100"> <input type="text" size="12" name="Mont"/></td>
+					<td width="100"> 
 						<select size="3" name="Sith">
 							<option value="E">Enregistré</option>
 							<option value="V">Validé</option>
@@ -86,37 +87,20 @@
 						</select>
 					</td>
 					<td>
-						<input type="text" class="zone" size="6" name="Njbh"/>
+						<input type="text" class="zone" size="12" name="Njbh"/>
 					</td>	
 				</tr>
 				
 			</table>		
 		</p>	
 		<p>
-			<input class="zone" type="reset" /><input type="submit">
+			 <input type="submit" class="btn"/> <input type="reset" class="btn"/>
 		</p>
 	</form>
 </body>
 </html>
 
 <?php
-  // Définir le nouveau fuseau horaire
-  //date_default_timezone_set('Europe/Paris');
-  //$date = date(' m-y');
-  //echo $date."<BR />";
-
-  echo"Vous avez choisi : ";
-  $choix=$_POST["choix"];
-  switch($choix)
-  {
-	  case "1" : $choix;
-	  
-				break;
-   	  case "2" : $choix;
-				break;
-	  case "3" : $choix;
-				break;
-  }
-  echo"$choix"; 
+  echo"Vous êtes bien sur la page de comptable";
   
 ?>
