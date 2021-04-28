@@ -1,6 +1,6 @@
-body{
+﻿body{
 	margin: 0 auto;
-	background-image: url('../images/office1.jpg');
+	background-image: url('images/office.jpg');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
