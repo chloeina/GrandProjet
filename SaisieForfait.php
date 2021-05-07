@@ -17,9 +17,9 @@
 	<link href="SaisieForfait.css" rel="stylesheet" type="text/css" />
 	
 	<SCRIPT LANGUAGE="JavaScript">
-		var maintenant=new Date();
-		var mois=maintenant.getMonth()+1;
-		var an=maintenant.getFullYear();
+		var maintenant = new Date();
+		var mois = maintenant.getMonth()+1;
+		var an = maintenant.getFullYear();
 		document.write("Nous sommes le ",mois,"/",an,".");
 	</SCRIPT>
 </head>
@@ -28,6 +28,7 @@
 	Vous êtes bien connecté 
 	<b>
 		<?php
+		//Reflechir a l'"id"
 		echo $_SESSION['username'];
 		?>
 	</b>.<br/>
@@ -43,8 +44,12 @@
 		</div><br/>
 		
 	<h1> Saisis des frais </h1>
-	<form action="saisie.php" method="post" name="saisieforfait">
+	<form action="Saisie.php" method="post" name="saisieforfait">
 		<table border="2" cellpadding="2" cellpadding="5">
+		
+		<br>idVisi<input type="text" name="idVisi"/>
+		mois<input type="text" name="mois"/><br><br>
+		
 			<tr>
 				<caption>Etat des frais forfaitaires</caption>
 			</tr>
@@ -52,11 +57,11 @@
 				<th> Frais forfaitaires </th> <th> Repas midi </th> <th> Nuitée </th><th> Repas soir plus nuitée </th> <th> Kilomètres </th> 
 			</tr>
 			<tr align="center">
-				<th> Montant </th>
-				<td width="90" ><input type="text" size="10" name="RQ"/></td>
-				<td width="90"><input type="text" size="10" name="NQ"/></td> 
-				<td width="90"> <input type="text" size="10" name="RNQ"/></td>
-				<td width="90"> <input type="text" size="10" name="KQ"/></td>
+				<th> Quantité </th>
+				<td width="90" ><input type="text" size="3" name="RQ"/></td>
+				<td width="90"><input type="text" size="3" name="NQ"/></td> 
+				<td width="90"> <input type="text" size="3" name="RNQ"/></td>
+				<td width="90"> <input type="text" size="3" name="KQ"/></td>
 			</tr>
 
 		</table><br/>
