@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Login Formulaire </title>
+	<link rel="stylesheet" type="text/css" href="../css/login-stylesheet.css">
+	<script type="text/javascript">
+	function verifChamps()
+	{
+		if (document.getElementById('nom').value==''
+            || document.getElementById('mdp').value==''
+              )
+		{
+			alert("Veuillez remplir tous les champs");
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+</script>
+</head>
+<body>
+	<div class="login">
+	<img src="../images/logo.png"/>
+		<form method="post" action="../php/login.php" onSubmit="return verifChamps()" name="login">
+			<div class="premier">
+				<input id="nom" type="text" name="username" placeholder="identifiant" class="input"/>	
+			</div>
+			<div class="premier">
+				<input id="mdp" type="password" name="password" placeholder="mot de passe" class="input"/>
+			</div>
+			<input type="submit" type="submit" value="CONNEXION" class="btn-login"/>
+		</form>
+	</div>
+</body>
+</html>
